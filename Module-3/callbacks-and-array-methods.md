@@ -1,7 +1,7 @@
 # Extra lesson: Taking callbacks and array methods apart
 
 **Level:** intermediate, no frameworks
-**Estimated time:** about 2 hours for the core path, plus 60 to 90 minutes for the self study task
+**Estimated time:** about 2 hours
 **Prerequisites:** Module 2 (arrays, objects, functions, arrow functions), and Lessons 3.1 and 3.2. You should have met `forEach`, `map`, `filter` and `find` at least once before starting, because this lesson rebuilds them rather than introducing them.
 
 ## How this lesson is different
@@ -918,80 +918,16 @@ Task 6 returns a string, because `.toFixed()` always does. Wrap it in `Number()`
 
 ---
 
-## Self study task: build a small query toolkit
+## Before you move on
 
-**Time:** 60 to 90 minutes. Not submitted and not assessed. This is where the lesson actually lands.
+Whatever you write from here on, check it against this list. Every item is a mistake from Part 4 turned into a habit.
 
-You have spent this lesson writing higher-order functions. Now you will write a small library of them, and then use that library to answer real questions about a set of data.
-
-Everything here uses plain script files, with no build tools and nothing to install.
-
-### The data
-
-Create a project folder with one file to start with, `toolkit.js`, and put this array at the top of it:
-
-```js
-const readings = [
-  { station: 'Kjevik', date: '2026-03-01', tempC: -2.4, rainMm: 0, windMs: 3.1 },
-  { station: 'Kjevik', date: '2026-03-02', tempC: 1.2, rainMm: 4.5, windMs: 6.8 },
-  { station: 'Kjevik', date: '2026-03-03', tempC: 3.8, rainMm: 12.1, windMs: 9.4 },
-  { station: 'Landvik', date: '2026-03-01', tempC: -0.5, rainMm: 0, windMs: 2.2 },
-  { station: 'Landvik', date: '2026-03-02', tempC: 2.9, rainMm: 2.0, windMs: 5.1 },
-  { station: 'Landvik', date: '2026-03-03', tempC: 5.1, rainMm: 8.7, windMs: 7.0 },
-  { station: 'Torungen', date: '2026-03-01', tempC: 0.9, rainMm: 0.2, windMs: 11.6 },
-  { station: 'Torungen', date: '2026-03-02', tempC: 3.3, rainMm: 6.4, windMs: 14.2 },
-  { station: 'Torungen', date: '2026-03-03', tempC: 4.0, rainMm: 15.8, windMs: 12.9 },
-];
-```
-
-### Level 1: the toolkit
-
-Below the data, write the following functions. Every one of them must take a callback, and none of them may modify the array passed in.
-
-1. `pluck(items, keySelector)` - returns an array of the values the selector picks out.
-   `pluck(readings, (r) => r.station)` gives an array of nine station names.
-2. `where(items, predicate)` - returns the items for which the predicate is true.
-3. `sortBy(items, valueSelector)` - returns a **new** array, sorted ascending by the number the selector returns.
-4. `groupBy(items, keySelector)` - returns an object whose keys are what the selector returns, and whose values are arrays of the matching items.
-5. `summarise(items, valueSelector)` - returns an object with `count`, `total`, `average`, `min` and `max` for the numbers the selector picks out. Round the average to one decimal place.
-
-Write each one with the array methods, not with a raw `for` loop. You already proved you can do the loop version. For `min` and `max`, `Math.min(...numbers)` from Lesson 3.1 will save you a loop.
-
-Test each function as you write it, by calling it directly at the bottom of the file. Run the file with `node toolkit.js` if you have Node installed, or load it from an HTML page as described below.
-
-### Level 2: the report
-
-Now use your toolkit. Add a `report()` function at the bottom of `toolkit.js` that prints a console report containing at least:
-
-- The number of readings, and the list of station names with no duplicates.
-- The wettest single reading: station, date and rainfall.
-- Every reading where it stayed below freezing, or a clear message if there were none.
-- A per-station summary of temperature, using `groupBy` and `summarise` together.
-- The three windiest readings, in descending order, as readable lines.
-- A boolean answer to: did every station record rain on at least one day?
-
-Call `report()` on the last line of the file.
-
-To see it in a browser rather than in Node, make an `index.html` next to it with `<script src="toolkit.js"></script>` just before the closing `</body>` tag, open it, and read the console. Nothing else is needed.
-
-### Level 3, optional challenges
-
-- Add `countBy(items, keySelector)` which returns an object of key to count, and reimplement `groupBy` using it, or the other way round.
-- Add a `pipe(...functions)` helper that takes any number of functions and returns a new function running them left to right. Use it to build a named `wettestFirst` transformation out of smaller pieces.
-- Make `sortBy` accept an optional second argument for direction, defaulting to ascending.
-- Add a `formatTable(items, columns)` function that takes an array of column definitions, each with a `header` and a `value` callback, and prints an aligned text table. This is the payoff for everything in Part 1: a column definition is just an object with a function inside it.
-- Split the data into its own `readings.js` file and load it with a second `<script>` tag placed **before** `toolkit.js`. Get the order wrong and you will see a `ReferenceError`, which is a useful thing to have seen once. There is a tidier way to split files across a project, and you will meet it later in this module.
-
-### What good looks like
-
-Before you call it done, check:
-
-- No function in your toolkit modifies the array it was given. Prove it by logging the original after each call.
 - Every callback that needs to return a value does return one.
-- Every `find` result is checked before use.
+- Every `find` result is checked before it is used.
 - Every accumulator is declared outside its `forEach`, with `let` for numbers and `const` for objects and arrays.
-- No chain is longer than four steps without a named intermediate variable.
-- Every function has a name that says what it gives back, not how it works.
+- Nothing is chained after a `forEach`.
+- Anything you `sort` is a copy, and numbers get a comparator.
+- No chain runs longer than four steps without a named intermediate variable.
 
 ---
 
