@@ -1,7 +1,7 @@
 # Extra lesson: Look at the DOM, then draw it from your data
 
-**Estimated time:** about 2 hours, plus the self study task at the end
-**You will need:** variables, `if`, `for...of`, arrays, objects, functions, and `filter` and `find` from Module 3. Nothing else.
+**Estimated time:** about 2 hours, plus the self study task at the end  
+**You will need:** variables, `if`, `for...of`, arrays, objects, functions, and `filter` and `find` from Module 3. Nothing else.  
 **Not in this lesson:** events. There is no `addEventListener` anywhere below. That is Lesson 4.3, and everything here is meant to make that lesson easier.
 
 ## How this lesson is different
