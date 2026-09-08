@@ -1,4 +1,4 @@
-# Extra lesson: One value at a time
+# One value at a time
 
 This is an optional extra lesson. It goes over the same ground as lessons 1.1 and 1.2, but by a different road, with different examples. If the regular lessons made sense, this one will make them stick. If they did not, this one might be the version that lands.
 

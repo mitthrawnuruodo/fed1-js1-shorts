@@ -1,4 +1,4 @@
-# Extra lesson: One belt, four stations
+# One belt, four stations
 
 Module 7 gives you four things that all act on the same list: search, sort, pagination and rendering. Each one is explained well on its own. What the module says only once, in a note near the end, is the thing that actually decides whether your project works:
 

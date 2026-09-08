@@ -1,4 +1,4 @@
-# Extra lesson: Answer a question, or do a thing
+# Answer a question, or do a thing
 
 This is an optional extra lesson covering the same ground as lessons 2.3 and 2.4, by a different road.
 

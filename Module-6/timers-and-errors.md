@@ -1,4 +1,4 @@
-# Extra lesson: A note for later, and the net you left behind
+# A note for later, and the net you left behind
 
 **Estimated time:** about 2 hours for the core path, plus 45 to 60 minutes for the self study task.  
 **Prerequisites:** Modules 1 to 5, plus Lessons 6.1 and 6.2.

@@ -1,4 +1,4 @@
-# Extra lesson: Waiting without freezing
+# Waiting without freezing
 
 **Estimated time:** about 2 hours for the core path, plus 45 to 60 minutes for the self study task.  
 **Prerequisites:** Modules 1 to 4. You need variables, `if`, loops, arrays, objects, functions, and enough DOM to select an element, create one, and listen for a click.

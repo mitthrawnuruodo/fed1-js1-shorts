@@ -1,4 +1,4 @@
-# Extra lesson: The question decides the shape
+# The question decides the shape
 
 This is an optional extra lesson covering the same ground as lessons 2.1 and 2.2, by a different road.
 

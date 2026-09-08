@@ -1,4 +1,4 @@
-# Extra lesson: Look at the DOM, then draw it from your data
+# Look at the DOM, then draw it from your data
 
 **Estimated time:** about 2 hours, plus the self study task at the end  
 **You will need:** variables, `if`, `for...of`, arrays, objects, functions, and `filter` and `find` from Module 3. Nothing else.  

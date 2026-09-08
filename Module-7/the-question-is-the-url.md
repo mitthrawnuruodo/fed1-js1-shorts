@@ -1,4 +1,4 @@
-# Extra lesson: The question is the URL
+# The question is the URL
 
 Lesson 7.1 teaches server-side pagination properly: query parameters, the `meta` object, Next and Previous, numbered buttons. Then it has to admit that the `/old-games` endpoint holds two records, so `page` and `limit` change nothing. You build the machinery and never get to see it work.
 

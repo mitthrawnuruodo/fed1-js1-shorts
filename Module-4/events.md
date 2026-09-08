@@ -1,4 +1,4 @@
-# Extra lesson: Events, or how to hand your code to the browser
+# Events, or how to hand your code to the browser
 
 **Estimated time:** about 2 hours for the core path, plus 60 to 90 minutes for the self study task.  
 **You will need:** variables, `if`, `for` and `for...of`, arrays, objects, functions, `forEach`, `map`, `filter` and `find`, plus Lessons 4.1 and 4.2 (selecting elements, changing them, creating them).  

@@ -1,4 +1,4 @@
-# Extra lesson: Four verbs and one parcel
+# Four verbs and one parcel
 
 **Estimated time:** about 2 hours for the core path, plus 45 to 60 minutes for the self study task.  
 **Prerequisites:** Modules 1 to 4, plus Lessons 5.1 and 5.2. You need `fetch`, `async`/`await`, `response.json()`, and enough DOM to select an element, create one, and listen for a click.  

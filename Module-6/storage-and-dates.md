@@ -1,4 +1,4 @@
-# Extra lesson: Flat paper, and the date that came back wrong
+# Flat paper, and the date that came back wrong
 
 **Estimated time:** about 2 hours for the core path, plus 45 to 60 minutes for the self study task.  
 **Prerequisites:** Modules 1 to 5.

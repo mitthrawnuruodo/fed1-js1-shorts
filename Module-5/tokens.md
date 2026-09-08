@@ -1,4 +1,4 @@
-# Extra lesson: The ticket, not the ID card
+# The ticket, not the ID card
 
 **Estimated time:** about 1 hour, plus 30 minutes for the self study task.  
 **Prerequisites:** Lessons 5.1 and 5.2, and the extra lesson "Four verbs and one parcel". You need `fetch` with an options object, `JSON.stringify`, status codes, and `response.ok`.

@@ -1,4 +1,4 @@
-# Extra lesson: Taking callbacks and array methods apart
+# Taking callbacks and array methods apart
 
 **Estimated time:** about 2 hours  
 **You will need:** variables, `if`, the `for` loop, arrays, objects, functions and arrow functions. Nothing else.

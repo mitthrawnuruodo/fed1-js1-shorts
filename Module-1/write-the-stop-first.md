@@ -1,4 +1,4 @@
-# Extra lesson: Write the stop first
+# Write the stop first
 
 This is an optional extra lesson covering the same ground as lessons 1.3 and 1.4, by a different road.
 

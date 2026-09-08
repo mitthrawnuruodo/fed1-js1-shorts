@@ -1,4 +1,4 @@
-# Extra lesson: Unpacking data, and getting out of one file
+# Unpacking data, and getting out of one file
 
 **Estimated time:** about 2 hours for the core path, plus 60 to 90 minutes for the self study task  
 **Prerequisites:** Lessons 3.1 and 3.2. You should be comfortable with objects, arrays, arrow functions and `forEach` / `map` / `filter` / `find` before you start.
