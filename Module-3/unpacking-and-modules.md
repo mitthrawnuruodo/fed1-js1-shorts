@@ -1,13 +1,13 @@
 # Unpacking data, and getting out of one file
 
 **Estimated time:** about 2 hours for the core path, plus 60 to 90 minutes for the self study task  
-**Prerequisites:** Lessons 3.1 and 3.2. You should be comfortable with objects, arrays, arrow functions and `forEach` / `map` / `filter` / `find` before you start.
+**Prerequisites:** Modules 1 and 2. You should be comfortable with objects, arrays, arrow functions and `forEach` / `map` / `filter` / `find` before you start.
 
 ## How this lesson is different
 
 The regular lessons walk through this material feature by feature: here is `Object.keys()`, here is `Object.entries()`, here is destructuring, here is the spread operator, here is `export`, here is `import`. Each one gets an introduction, an example and an exercise. That works, and you should still do those lessons.
 
-This one is built around three ideas instead of seven features. Everything in Lesson 3.3 collapses into two sentences, and everything in Lesson 3.4 collapses into one:
+This one is built around three ideas instead of seven features. Everything in Lesson 3.1 collapses into two sentences, and everything in Lesson 3.2 collapses into one:
 
 1. **The shape goes on the left.** Destructuring is not new syntax to memorise. It is you drawing a picture of the data you want, on the left-hand side of the `=`.
 2. **Three dots, two directions.** The same `...` either collects loose things into one container, or pours one container out into a new one. Which one it does depends entirely on which side of the `=` it sits.
@@ -344,7 +344,7 @@ That error is not a bug in your thinking. It is a correct description of the wor
 
 So you have two options. Either learn a completely separate set of tools for objects, or convert the object into an array and keep using the tools you already have.
 
-JavaScript gives you three converters, and that is the whole of Lesson 3.3's first half.
+JavaScript gives you three converters, and that is the whole of Lesson 3.1's first half.
 
 ## The three converters
 
@@ -1490,4 +1490,4 @@ Three sentences to take away.
 
 **A file is a room with a door.** Everything is private until you export it, so the real question for every module you write is not what to export but how little.
 
-The next module moves on to the DOM, where your JavaScript starts changing what people actually see on the page. When you get there you will find that `Object.entries()` and destructuring turn up constantly, because data arriving from anywhere outside your own file tends to come as objects that you need to take apart before you can display them.
+The second half of this module moves on to the DOM, where your JavaScript starts changing what people actually see on the page. When you get there you will find that `Object.entries()` and destructuring turn up constantly, because data arriving from anywhere outside your own file tends to come as objects that you need to take apart before you can display them.

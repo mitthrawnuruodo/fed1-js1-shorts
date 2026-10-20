@@ -1,8 +1,8 @@
 # Events, or how to hand your code to the browser
 
 **Estimated time:** about 2 hours for the core path, plus 60 to 90 minutes for the self study task.  
-**You will need:** variables, `if`, `for` and `for...of`, arrays, objects, functions, `forEach`, `map`, `filter` and `find`, plus Lessons 4.1 and 4.2 (selecting elements, changing them, creating them).  
-**Covers:** Lesson 4.3 (events and forms) and Lesson 4.4 (best practices), from a different direction.  
+**You will need:** variables, `if`, `for` and `for...of`, arrays, objects, functions, `forEach`, `map`, `filter` and `find`, plus Lessons 3.3 and 3.4 (selecting elements, changing them, creating them).  
+**Covers:** Lesson 4.1 (events and forms) and Lesson 4.2 (best practices), from a different direction.  
 
 ## How this lesson is different
 
@@ -14,7 +14,7 @@ This lesson is built on two ideas instead of a list of event names.
 
 **Idea two: a handler changes your data and asks for a redraw. It does not go poking at the page.** In the previous lesson you wrote `render(state)`, changed the data by hand, and called `render` again to see the change. This is the lesson where a user click takes over that job.
 
-The best practices from Lesson 4.4 are not saved up for a section at the end. They are built into how the code is written from the first example: real buttons, no `onclick` in the HTML, classes instead of colours, named functions, and no accidental globals. Part 5 then gives them their proper names.
+The best practices from Lesson 4.2 are not saved up for a section at the end. They are built into how the code is written from the first example: real buttons, no `onclick` in the HTML, classes instead of colours, named functions, and no accidental globals. Part 5 then gives them their proper names.
 
 ---
 
@@ -804,7 +804,7 @@ function findPhrase(state, id) {
 }
 ```
 
-Neither one mentions `document`. They are plain array work of the kind you did in Module 3, and you can test them in the console without a page in front of you.
+Neither one mentions `document`. They are plain array work of the kind you did in Module 2, and you can test them in the console without a page in front of you.
 
 **Piece three: one function that turns one phrase into one element.**
 
@@ -857,7 +857,7 @@ function createPhraseItem(phrase) {
 
 One phrase in, one element out. Nothing is added to the page here, so you can call it in the console and inspect the result before you trust it.
 
-Notice which way round the dependency runs: the button's text is worked out **from** `phrase.revealed`, never the other way round. And notice that the JavaScript never sets a colour. It adds a class, and the stylesheet decides what that looks like. That is the separation of concerns from Lesson 4.4 doing real work rather than being a slogan.
+Notice which way round the dependency runs: the button's text is worked out **from** `phrase.revealed`, never the other way round. And notice that the JavaScript never sets a colour. It adds a class, and the stylesheet decides what that looks like. That is the separation of concerns from Lesson 4.2 doing real work rather than being a slogan.
 
 The `aria-pressed` attribute tells a screen reader that this button is a switch and whether it is currently on. It is one `setAttribute` call and it is the difference between a usable page and a confusing one.
 
@@ -1312,7 +1312,7 @@ If a total on your page has ever come out as `05` or `31`, this is why.
 
 **An empty field is an empty string, not `null`.** So the check for "did they fill this in" is `=== ''`.
 
-**Whitespace counts.** A field containing three spaces is not empty. `.trim()` from Module 3 removes whitespace from both ends, and you should call it on any text the user typed before you check or store it.
+**Whitespace counts.** A field containing three spaces is not empty. `.trim()` from Module 2 removes whitespace from both ends, and you should call it on any text the user typed before you check or store it.
 
 ```js
 const bike = document.querySelector('#bike').value.trim();
@@ -1375,7 +1375,7 @@ function validateBooking(booking) {
 }
 ```
 
-An array of problems, built with `push`, exactly as you built arrays in Module 2. An empty array means the booking is fine. That is why there is no `isValid` flag to keep in step with anything: `errors.length === 0` is the answer, worked out from the errors themselves.
+An array of problems, built with `push`, exactly as you built arrays in Module 1. An empty array means the booking is fine. That is why there is no `isValid` flag to keep in step with anything: `errors.length === 0` is the answer, worked out from the errors themselves.
 
 The `else if` on the bike field is deliberate. If the field is empty, "too short" is true as well, and telling somebody two things about one empty box is unhelpful. One problem, one message.
 
@@ -1644,7 +1644,7 @@ Add `renderToolOptions(state);` inside `render(state)`, near the end. That keeps
 
 That convenience has a price, and it is worth seeing it. Redrawing a control the user has already touched throws away what they had done with it: without the two `chosenBefore` lines, taking a tool from the board would silently empty the dropdown the user had just chosen from. Text they have typed goes the same way, which is why the borrower input is never redrawn by `render`. The general rule is: redraw the parts that come from the data, and leave alone the parts the user is holding. Where the two overlap, as they do in this dropdown, save the value and put it back.
 
-The fourth validation check deserves a word, because on this page you cannot actually make it fire. Every route to a tool becoming unavailable goes through `render`, which rebuilds the dropdown and drops the option, so the choice clears itself before you can submit it. That makes the check a backstop rather than a working feature here, and it is still worth writing: it costs three lines, it survives somebody later changing how the dropdown is drawn, and from Module 5 onwards your data will be coming from somewhere else entirely and can go stale between the moment you draw a list and the moment the user acts on it. Never trust that a list drawn a minute ago is still true.
+The fourth validation check deserves a word, because on this page you cannot actually make it fire. Every route to a tool becoming unavailable goes through `render`, which rebuilds the dropdown and drops the option, so the choice clears itself before you can submit it. That makes the check a backstop rather than a working feature here, and it is still worth writing: it costs three lines, it survives somebody later changing how the dropdown is drawn, and later in this module your data will start coming from somewhere else entirely and can go stale between the moment you draw a list and the moment the user acts on it. Never trust that a list drawn a minute ago is still true.
 
 **Level 2 answer.** Validating the name on `input` from the start means the message "Please give your name" appears the instant somebody types the first letter of their name, and stays there while they type the second. The error is technically correct and practically insulting. Errors belong after an attempt, not during one.
 
@@ -1742,7 +1742,7 @@ function setUpPhrasebook() {
 setUpPhrasebook();
 ```
 
-Everything is now inside one function, so nothing leaks out. The listeners still work perfectly well after `setUpPhrasebook` has finished, because the browser kept a reference to the handlers, and those handlers can still see `state`. Lesson 4.4 calls this a closure. You do not need to understand the mechanism today; you need to know that this arrangement is safe, and that the function scope you learnt in Module 2 is the reason it works.
+Everything is now inside one function, so nothing leaks out. The listeners still work perfectly well after `setUpPhrasebook` has finished, because the browser kept a reference to the handlers, and those handlers can still see `state`. Lesson 4.2 calls this a closure. You do not need to understand the mechanism today; you need to know that this arrangement is safe, and that the function scope you learnt in Module 2 is the reason it works.
 
 The other guard is the `'use strict';` you have had at the top all along. Without it, a typo creates a variable:
 
@@ -2294,4 +2294,4 @@ If the lesson worked, these should feel obvious rather than clever.
 - Validation is a function that takes data and returns problems. Showing those problems is a different function.
 - If something is clickable, it is a `<button>`.
 
-The next module moves on to getting real data from the internet rather than typing it into an array at the top of your file. When it arrives, you will put it in `state` and call `render`, and this whole structure will still be standing.
+The rest of this module moves on to getting real data from the internet rather than typing it into an array at the top of your file. When it arrives, you will put it in `state` and call `render`, and this whole structure will still be standing.

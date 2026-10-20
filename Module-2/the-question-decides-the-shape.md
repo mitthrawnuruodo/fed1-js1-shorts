@@ -1,6 +1,6 @@
 # The question decides the shape
 
-This is an optional extra lesson covering the same ground as lessons 2.1 and 2.2, by a different road.
+This is an optional extra lesson covering the same ground as lessons 1.5 and 2.1, by a different road.
 
 The regular lessons show you arrays, then objects, and compare them once you have met both. This one starts with the choice. You have some real information in front of you and you have to decide which shape to put it in, and the syntax follows from that decision rather than coming first.
 
@@ -725,7 +725,7 @@ The second one is the mistake this exercise exists for. `shelf.length` is 4, but
 
 The last one catches people for a different reason. `.length` is not only an array thing. It works on strings too, where it counts characters instead of items. `shelf[0]` is the string `'Fjord Traders'`, so `.length` counts its 13 characters, including the space in the middle.
 
-Both readings of `.length` mean the same thing underneath: how many pieces is this made of. An array is made of items and a string is made of characters. Strings have a good deal more you can ask of them, and Module 3 opens with exactly that, so this is a first look rather than the whole story.
+Both readings of `.length` mean the same thing underneath: how many pieces is this made of. An array is made of items and a string is made of characters. Strings have a good deal more you can ask of them, and lesson 2.4 comes back to exactly that, so this is a first look rather than the whole story.
 
 **The harder one.** After `shelf[6] = 'Cabin Fever'`, the length is **7**.
 

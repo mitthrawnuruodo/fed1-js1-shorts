@@ -197,7 +197,7 @@ The rule of thumb: use the shortcut for text, and write the comparison out in fu
 
 Real decisions rarely rest on one thing. You want to walk on only if there is enough light **and** you are not too tired. There are three operators for combining questions.
 
-These get a lesson of their own in Module 2, where you will see more of what they can do. Module 1 needs them sooner than that, because the Module 1 task cannot be finished without `&&`, so here is enough to be going on with.
+These get a lesson of their own in Module 2, where you will see more of what they can do. You need a little of them sooner than that, because real conditions very often need two questions at once, so here is enough to be going on with.
 
 **`&&` means and.** True only when both sides are true.
 
@@ -270,7 +270,7 @@ if (hasTimeAndEnergy && conditionsAreSafe) {
 
 Same logic. Now when it misbehaves you can log the two halves separately and find out which one is lying to you.
 
-That is as much as Module 1 asks of you. When these come round again in Module 2 you will find they are a little stranger than they look here, and rather more useful with it.
+That is as much as you need for now. When these come round again in Module 2 you will find they are a little stranger than they look here, and rather more useful with it.
 
 ---
 
@@ -1059,7 +1059,7 @@ There is one real difference. In the `for` version, `stage` exists only inside t
 
 ## Task: the route planner
 
-This is an alternative to the Module 1 task. It uses the same skills as the guessing game, but every run gives the same result, so you can check your own work without playing it twenty times.
+This is a self study task that uses the skills from lessons 1.3 and 1.4. Every run gives the same result, so you can check your own work by hand.
 
 You are planning a walk. There is a fixed amount of daylight left, the route has a fixed number of stages, and each stage takes longer than the last because you get slower as you go. The program works out how far you get before the light runs out, and whether that is far enough to reach the cabin.
 
@@ -1236,4 +1236,4 @@ A loop is that same question asked over and over. Write the stop before the work
 
 And `for` when you know the count, `while` when you are waiting for something to happen.
 
-That is the whole of Module 1. Everything after this is built from these pieces.
+That is conditions and loops. Arrays come next, in lesson 1.5, and everything after that is built from these pieces.

@@ -1,6 +1,6 @@
 # Answer a question, or do a thing
 
-This is an optional extra lesson covering the same ground as lessons 2.3 and 2.4, by a different road.
+This is an optional extra lesson covering the same ground as lessons 2.2 and 2.3, by a different road.
 
 It carries on with the board game shelf at the village hall from the previous extra lesson, which by now has six games on it.
 
@@ -57,7 +57,7 @@ Suppose you now want to know whether the shelf holds more than four hours of gam
 
 The word `shelf` appears inside the function, but it was never mentioned in the brackets. The function is reaching outside itself to grab a variable that happens to exist nearby. That works until somebody renames `shelf`, or until there are two shelves, at which point the function is stuck describing whichever one it was written next to.
 
-Fixing those two problems is most of what lesson 2.3 is about, so let us fix them in that order.
+Fixing those two problems is most of what lesson 2.2 is about, so let us fix them in that order.
 
 ---
 
@@ -413,7 +413,7 @@ It is not an error and it is occasionally useful, but it is a reliable source of
 
 ## Part 6: Reading arrow functions
 
-There is a second way to write a function, and the reason to learn it now is not that you need it. It is that you are about to start seeing it everywhere, and in Module 3 you will meet array methods where the arrow form is what everybody writes.
+There is a second way to write a function, and the reason to learn it now is not that you need it. It is that you are about to start seeing it everywhere, and in lesson 2.5 you will meet array methods where the arrow form is what everybody writes.
 
 So the aim of this part is **reading**, not writing. Here is one function in four costumes.
 
@@ -511,7 +511,7 @@ There is a second difference, involving a keyword called `this`, which matters a
 
 ## Part 7: What `&&` and `||` actually hand back
 
-You met `&&` briefly in Module 1, because the Module 1 task could not be finished without it. Here it gets the treatment it deserves, and the first thing to say is that it is stranger than it looked.
+If you did the extra lesson Write the stop first, you met `&&` briefly there. Here it gets the treatment it deserves, and the first thing to say is that it is stranger than it looked.
 
 ### Short-circuiting is the whole story
 
@@ -1076,7 +1076,7 @@ Short-circuiting protects against the error. It does not tell you the error near
 
 ## Task: the game night picker
 
-This is an alternative to the Module 2 task. Same skills, different application, and no to-do list anywhere.
+This is a self study task that uses the skills from lessons 2.1 to 2.3, in one small application.
 
 People turn up at the village hall, and somebody has to pick a game. Your program takes the number of people present and how long the evening is, and works out which games on the shelf will actually do.
 
@@ -1275,4 +1275,4 @@ Arrow functions are the same thing in shorter clothes, and the one to watch when
 
 And `&&` and `||` stop as soon as the answer is settled, and hand back one of the values you gave them rather than a boolean. That single fact explains the guard pattern, the default-value pattern, `||=`, `&&=`, and the trap where a perfectly good `0` gets thrown away.
 
-That is Module 2. You now have somewhere to put data, and something to do to it.
+That is objects, functions and logical operators. You now have somewhere to put data, and something to do to it.

@@ -336,7 +336,7 @@ console.log(parseFloat('3.9 metres'));  // 3.9
 
 **Which one should you reach for?** Use `Number()` when the whole thing should be a number and anything else is a mistake you want to hear about. Use `parseInt()` when you know there is a unit or some other text stuck on the end, like `'180 cm'`, and you only want the whole number at the front. Use `parseFloat()` in that same situation when the decimals matter.
 
-Module 3 comes back to `parseInt` and `parseFloat` properly, alongside a way of controlling how many decimal places a number displays. Everything here is a first look, and enough to get you through Module 1.
+Lesson 2.4 comes back to `parseInt` and `parseFloat` properly, alongside a way of controlling how many decimal places a number displays. Everything here is a first look, and enough to get you through Module 1.
 
 **One last thing about `NaN`.** It means the conversion failed, so it is worth checking for. But it behaves oddly. It is the only value in JavaScript that is not equal to itself:
 
